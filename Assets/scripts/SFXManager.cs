@@ -16,7 +16,17 @@ public class SFXManager : MonoBehaviour
     {
          source=GetComponent<AudioSource>();    
     }
-    
+
+   public void GoombaDeath()
+   {
+    source.PlayOneShot(goombaDeath);
+   }
+
+    public void MarioDeath()
+   {
+    source.PlayOneShot(marioDeath);
+   }
+   
     public void Coin()
     {
         source.PlayOneShot(coin);

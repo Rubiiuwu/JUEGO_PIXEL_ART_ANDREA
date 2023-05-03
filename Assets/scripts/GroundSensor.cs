@@ -16,19 +16,23 @@ public class GroundSensor : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other) 
     {    
-       if (other.gameObject.layer == 0)
+       if (other.gameObject.layer == 3)
        {
         isGrounded = true;
        }
-        else if (other.gameObject.layer == 0)
+    }
+
+    void OnTriggerStay2D(Collider2D other) 
+    {
+        if (other.gameObject.layer == 3)
        {
-        isGrounded = false;
+       isGrounded = true;     
        }
     }
 
-    void OnTriggerExit2D(Collider2D Other)
+    void OnTriggerExit2D(Collider2D other)
     {
-        if(Other.gameObject.layer == 0)
+        if (other.gameObject.layer == 3)
         {
             isGrounded = false;
         }
