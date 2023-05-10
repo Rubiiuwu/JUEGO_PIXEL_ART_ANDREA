@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coin
   - colisionEnemy
+  - DeathZone
   layers:
   - Default
   - TransparentFX

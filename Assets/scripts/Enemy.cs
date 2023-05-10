@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class enemy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     public float speed;
     float horizontal = 1;
@@ -17,7 +17,7 @@ public class enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider = GetComponent <BoxCollider2D>();
         rBody = GetComponent <Rigidbody2D>();
-        SFXManager = GameObject.Find("SFX").GetComponent<SFX>();
+        SFXManager = GameObject.Find("SFXManager").GetComponent<SFX>();
 
     }
     void Update()
@@ -29,7 +29,7 @@ public class enemy : MonoBehaviour
      {
         anim.SetBool("IsDead", true);
         boxCollider.enabled = false;
-        Destroy(this.gameObject, 0.5f);
+        Destroy(this.gameObject, 0.2f);
         }
 
     void OnCollisionEnter2D(Collision2D colision) 

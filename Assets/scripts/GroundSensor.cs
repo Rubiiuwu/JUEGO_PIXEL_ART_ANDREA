@@ -1,20 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine. SceneManagement;
 
 public class GroundSensor : MonoBehaviour
 {
     private PlayerController controller;
     public bool isGrounded;
     SFX SFXManager;
-    Enemy enemy;
+    
 
     // Start is called before the first frame update
     void Awake()
     {
         controller = GetComponentInParent<PlayerController>();
-        enemy = GameObject.Find("Enemy").GetComponent<Enemy>();
-        SFXManager = GameObject.Find("SFX").GetComponent<SFX>();
+        SFXManager = GameObject.Find("SFXManager").GetComponent<SFX>();
     }
 
     // Update is called once per frame
@@ -28,9 +28,16 @@ public class GroundSensor : MonoBehaviour
        {
         Debug.Log("enemy death");
         SFXManager.EnemyDeath();
-        Enemy enemy = other.gameObject.GetComponent<enemy> ();
+        Enemy enemy = other.gameObject.GetComponent<Enemy> ();
         enemy.Die();
        }
+        
+        if (other.gameObject.tag == "DeathZone")
+       {
+        Debug.Log("rip");
+        SceneManager.LoadScene(2);
+       }
+
     }
 
     void OnTriggerStay2D(Collider2D other) 

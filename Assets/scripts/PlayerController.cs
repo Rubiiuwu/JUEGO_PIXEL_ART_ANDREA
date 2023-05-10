@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
             spriteRender.flipX = false;
         }
 
-         if(Input.GetButtonDown ("Jump") && groundSensor)
+         if(Input.GetButtonDown ("Jump") && groundSensor.isGrounded)
         {
             rBody.AddForce (Vector2.up * JumpForce, ForceMode2D.Impulse);
         }

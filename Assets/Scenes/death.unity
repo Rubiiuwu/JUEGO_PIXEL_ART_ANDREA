@@ -519,7 +519,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PIXEL
+  m_Text: GAME OVER
 --- !u!222 &1165655673
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -599,7 +599,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: START
+  m_Text: TRY AGAIN
 --- !u!222 &1598368770
 CanvasRenderer:
   m_ObjectHideFlags: 0
