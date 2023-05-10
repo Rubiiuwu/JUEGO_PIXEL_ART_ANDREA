@@ -5,14 +5,14 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     BoxCollider2D boxCollider;
-    SFXManager sfxManager;
+    SFX sfxManager;
     
     // Start is called before the first frame update
 
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
-        sfxManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
+        sfxManager = GameObject.Find("SFX").GetComponent<SFX>();
     }
        void OnCollisionEnter2D(Collision2D colision)
     {

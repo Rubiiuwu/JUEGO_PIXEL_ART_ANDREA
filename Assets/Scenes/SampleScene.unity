@@ -261,13 +261,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 84352011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77485dbbc1d559441b914d5438b2a046, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b9ada96cccb05549954a3a1121e10d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goombaDeath: {fileID: 8300000, guid: e5edcd8d234bcc84dbc3ce722e00b7b1, type: 3}
-  marioDeath: {fileID: 8300000, guid: e5edcd8d234bcc84dbc3ce722e00b7b1, type: 3}
-  coin: {fileID: 8300000, guid: c8e4f3b27a070ba45a7145ddea155de4, type: 3}
-  bandera: {fileID: 0}
+  enemyDeath: {fileID: 0}
+  characterDeath: {fileID: 0}
+  coin: {fileID: 0}
 --- !u!1 &123900373
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +585,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1340595175}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &408543224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 408543225}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &408543225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408543224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.5200586, y: -0.85893303, z: 19.045717}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &476576097
 GameObject:
@@ -1232,7 +1262,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5111971, y: 0.26629853}
+  m_Size: {x: 1.63, y: 0.26629853}
   m_EdgeRadius: 0
 --- !u!114 &737228163
 MonoBehaviour:
@@ -1751,7 +1781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340595174}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.28, y: 0.16838816, z: -9}
+  m_LocalPosition: {x: -14.880001, y: 0.06838816, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1759,8 +1789,8 @@ Transform:
   - {fileID: 648141078}
   - {fileID: 317959839}
   - {fileID: 669603745}
-  m_Father: {fileID: 1372115824}
-  m_RootOrder: 6
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1340595176
 SpriteRenderer:
@@ -1917,8 +1947,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372115822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.4, y: -0.1, z: 20}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.43, y: 1.05, z: 20}
+  m_LocalScale: {x: 1.217, y: 1.3693, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1466437325}
@@ -1927,7 +1957,6 @@ Transform:
   - {fileID: 604337052}
   - {fileID: 1429519818}
   - {fileID: 1625068693}
-  - {fileID: 1340595175}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2565,7 +2594,7 @@ GameObject:
   - component: {fileID: 1881207700}
   - component: {fileID: 1881207699}
   - component: {fileID: 1881207701}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Enemigo-P\xEDxel-Art_2"
   m_TagString: colisionEnemy
   m_Icon: {fileID: 0}

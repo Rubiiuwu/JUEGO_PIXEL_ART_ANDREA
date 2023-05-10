@@ -10,18 +10,16 @@ public class enemy : MonoBehaviour
     Animator anim;
     BoxCollider2D boxCollider;
     Rigidbody2D rBody;
-    SFXManager SFXManager;
+    SFX SFXManager;
      
   void Start()
     {
         anim = GetComponent<Animator>();
         boxCollider = GetComponent <BoxCollider2D>();
         rBody = GetComponent <Rigidbody2D>();
-        SFXManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
+        SFXManager = GameObject.Find("SFX").GetComponent<SFX>();
 
     }
-
-
     void Update()
     {
       rBody.velocity = new Vector2(horizontal * speed, rBody.velocity.y); 
@@ -38,9 +36,9 @@ public class enemy : MonoBehaviour
     {
         if(colision.gameObject.tag == "Player")
         {
-            Debug.Log("Mario muerto");
+            Debug.Log("Player muerto");
             Destroy(colision.gameObject);
-            SFXManager.MarioDeath();
+            SFXManager.CharacterDeath();
             //SceneManager.LoadScene(2);
         }
 
